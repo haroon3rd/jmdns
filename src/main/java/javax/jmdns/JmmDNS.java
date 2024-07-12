@@ -421,4 +421,8 @@ public interface JmmDNS extends Closeable {
      */
     public abstract NetworkTopologyListener[] networkListeners();
 
+    public abstract void enableLTEsupport(ServiceInfo info, ServiceListener listener);
+
+    public abstract void disableLTEsupport();
+
 }

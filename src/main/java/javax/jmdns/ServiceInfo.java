@@ -652,6 +652,18 @@ public abstract class ServiceInfo implements Cloneable {
     public abstract String getNiceTextString();
 
     /**
+     * Amran Haroon
+     * Set the text for the service. Setting the text will fore a re-announce of the service.
+     *
+     * @param text
+     *            the raw byte representation of the text field.
+     * @exception IllegalStateException
+     *                if attempting to set the text for a non persistent service info.
+     */
+    public abstract void setMyText(byte[] text) throws IllegalStateException;
+
+
+    /**
      * Set the text for the service. Setting the text will fore a re-announce of the service.
      * 
      * @param text

@@ -1184,6 +1184,23 @@ public class ServiceInfoImpl extends ServiceInfo implements DNSListener, DNSStat
         return list;
     }
 
+
+    /**
+     * Amran Haroon
+     * {@inheritDoc}
+     */
+    @Override
+    public void setMyText(byte[] text) throws IllegalStateException {
+        System.out.println(Arrays.toString(text));
+        synchronized (this) {
+            this._text = text;
+            this._props = null;
+            this.setNeedTextAnnouncing(true);
+        }
+    }
+
+
+
     /**
      * {@inheritDoc}
      */
